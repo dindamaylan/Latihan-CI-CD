@@ -26,7 +26,7 @@ public class Get {
 
     @Step("I receive valid data for detail user")
     public void validateDataDetailUser(){
-        restAssuredThat(response -> response.body("'data'.'id'", equalTo(2)));
-        restAssuredThat(response -> response.body("'data'.'name'", equalTo("Janet")));
+        restAssuredThat(response -> response.body("data.id", equalTo(2)));
+        restAssuredThat(response -> response.body("data.first_name", equalTo("Janet")));
     }
 }
